@@ -1,0 +1,10 @@
+<messages>
+#{list items:messages, as:'message'}
+   <message>
+      <id>${message.id}</id>
+      <room>${message.room}</room>
+      <message>${message.message}</message>
+   </message>
+#{/list}
+</messages>
+   

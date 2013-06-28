@@ -1,0 +1,9 @@
+[
+#{list items:messages, as:'message'}
+{
+	"room": "${message.room}",
+	"message": "${message.message}"	
+}
+${message_isLast ? '' : ','}
+#{/list}
+]

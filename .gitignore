@@ -8,6 +8,7 @@
 db
 eclipse
 lib
+!public/lib
 log
 logs
 modules

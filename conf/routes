@@ -1,0 +1,42 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+*      /              							module:secure
+*      /admin              						module:crud
+
+# Home page
+GET     /                                       Application.index
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+
+# Messaging
+POST	/message									MessageController.sendMessage(format:'json')
+
+
+# Format from URL
+GET    	/message/{room}.{<json|xml|html>format}		MessageController.getMessagesByRoomExtension
+
+# Force JSON with template
+GET    	/message/{room}								MessageController.getMessagesByRoomUsingTemplate(format:'json')
+ 
+# Force JSON without template
+GET    	/messageJSON/{room}							MessageController.getMessagesByRoomJSON
+
+
+# Force XML without template
+GET    	/messageXML/{room}							MessageController.getMessagesByRoomXML
+
+
+
+
+
+
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}

@@ -1,0 +1,17 @@
+<html>
+<head>
+</head>
+<body>
+	<h1>Messages</h1>
+	
+	<table border="1">
+	#{list items:messages, as:'message'}
+		<tr>
+			<td>${message.room}</td>
+			<td>${message.message}</td>
+		</tr>
+	#{/list}
+	</table>
+
+</body>
+</html>
