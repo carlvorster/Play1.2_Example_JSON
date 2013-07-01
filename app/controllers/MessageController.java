@@ -52,11 +52,11 @@ public class MessageController extends Controller {
     public static void getMessagesByRoomExtension(String room) {
     	Logger.info("MessageController.getMessagesByRoomExtension:"+room);
     	
-    	List<Message> messages = Message.findMessagesOfRoom(room);
-    	Logger.info("length:"+messages.size());
+    	List<Message> messageLst = Message.findMessagesOfRoom(room);
+    	Logger.info("length:"+messageLst.size());
     	
     	// Using templates for all formats
-    	render(messages);
+    	render(messageLst);
     	
     	// Using templates for xml/html only
     	/*

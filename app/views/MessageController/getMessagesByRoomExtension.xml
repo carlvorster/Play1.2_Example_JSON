@@ -1,5 +1,5 @@
 <messages>
-#{list items:messages, as:'message'}
+#{list items:messageLst, as:'message'}
    <message>
       <id>${message.id}</id>
       <room>${message.room}</room>
